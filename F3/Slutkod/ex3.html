@@ -26,7 +26,7 @@
 							},
 										
 				setSeconds :   function( newSeconds ) { 
-									this.seconds = newSeconds 
+									this.seconds = newSeconds; 
 								},
 										
 				getSeconds :   function() { 
@@ -35,6 +35,11 @@
             };
 
 			//'Huvudprogrammet'
+			console.log( highScorePost.getNickName(), highScorePost.getSeconds());
+			highScorePost.setNickName('Eva');
+			highScorePost.setSeconds(3);
+			console.log( highScorePost.getNickName(), highScorePost.getSeconds());
+
 
 		</script>
 	</body>
