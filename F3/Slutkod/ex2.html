@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="sv">
+	<head>
+        <meta charset="utf-8" /> 
+        <title>
+			JavaScript för webbutveckling ISGB15		
+        </title>	
+	</head>
+	<body>
+        <p data-id="1">1</p>
+		<p data-id="2">2</p>
+		<p data-id="3">3</p>
+		<p data-id="4">4</p>
+		<p>Ett</p>
+		<p>Två</p>
+		
+		<div><p>Test</p></div>
+
+		<script>
+		
+			'use strict';
+
+			function searchDOM() {
+				
+				let bodyRef = document.querySelector( 'body' );
+				console.log('querySelector(\'body\')', bodyRef );
+
+				let pRefsOne = document.querySelectorAll( 'p' );
+				let nbrOfPsOne = pRefsOne.length;
+				
+				console.log('querySelectorAll(\'p\')', pRefsOne, nbrOfPsOne );
+
+				for(let i = 0; i < pRefsOne.length; i++) {
+					console.log( pRefsOne.item(i) );
+				}
+				
+				let pRefsTwo = document.querySelectorAll( 'p[data-id]' );
+				let nbrOfPsTwo = pRefsTwo.length;
+				
+				console.log('querySelectorAll(\'p[data-id]\')', pRefsTwo, nbrOfPsTwo );
+
+				for(let j = 0; j < pRefsTwo.length; j++) {
+					console.log( pRefsTwo.item(j) );
+				}
+				
+			}
+			
+			searchDOM();
+			
+		</script>
+		
+    </body>
+</html>

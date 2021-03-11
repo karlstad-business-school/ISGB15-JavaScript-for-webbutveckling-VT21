@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Objektorientering i JavaScript</title>
+		<meta charset="utf-8" /> 
+	</head>
+
+	<body>
+
+		<script>
+			
+			'use strict';
+			
+            let highScorePost = {
+
+                nickName : 'Lasse',
+				seconds : 5,
+				
+				setNickName :  function( newNickName ) { 
+							    this.nickName = newNickName
+							},
+										
+				getNickName :  function() { 
+								return this.nickName; 
+							},
+										
+				setSeconds :   function( newSeconds ) { 
+									this.seconds = newSeconds 
+								},
+										
+				getSeconds :   function() { 
+									return this.seconds; 
+								}
+            };
+
+			//'Huvudprogrammet'
+
+		</script>
+	</body>
+</html>

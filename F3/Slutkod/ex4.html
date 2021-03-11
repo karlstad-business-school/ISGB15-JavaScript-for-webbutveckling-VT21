@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Objektorientering i JavaScript</title>
+		<meta charset="utf-8" /> 
+	</head>
+
+	<body>
+
+		<script>
+			
+			"use strict";
+			
+			//----- highScorePost -----
+			function HighScorePost(inNickName, inSeconds) {
+
+				this.nickName = inNickName;
+				this.seconds = inSeconds;
+
+				this.setNickName =  function( newNickName ) { 
+								this.nickName = newNickName
+							};
+										
+				this.getNickName =  function() { 
+								return this.nickName; 
+							};
+										
+				this.setSeconds =  function( newSeconds ) { 
+									this.seconds = newSeconds 
+								};
+										
+				this.getSeconds =  function() { 
+									return this.seconds; 
+								};
+			}
+			//----- highScorePost -----
+			
+			//----- highScorePosts -----
+			function HighScorePosts() {
+				
+				this.highScoreList = [];
+				this.index = 0;
+
+				this.addHighScorePost = function( oHighScorePost ) {
+					this.highScoreList[this.index] = oHighScorePost;
+					this.index++;
+				};
+
+				this.getHighScoreList = function() {
+
+					let returnValue = '';
+
+					for(let i = 0; i < this.index; i++) {
+
+						returnValue += '<p>' + this.highScoreList[i].nickName + ' ' +
+							this.highScoreList[i].seconds + '</p>';
+					}
+
+					return returnValue;
+
+				}
+
+			}
+			//----- highScorePosts -----
+			
+			
+			//'Huvudprogrammet'
+			
+		</script>
+
+
+	</body>
+
+
+</html>

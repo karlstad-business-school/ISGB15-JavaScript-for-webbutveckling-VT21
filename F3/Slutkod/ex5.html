@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<title>Objektorientering i JavaScript</title>
+		<meta charset="utf-8" /> 
+	</head>
+
+	<body>
+		
+		<script>
+			
+			'use strict';
+
+			window.Date.prototype.svDatePrototype = function() {
+	
+				let currentYear = this.getFullYear();
+				let currentMonth = this.getMonth() + 1;
+				let currentDate = this.getDate();
+				
+				if( currentMonth < 10 ) {
+					currentMonth = '0' + currentMonth;
+				}
+				
+				if( currentDate < 10 ) {
+					currentDate = '0' + currentDate;
+				}
+				
+				return currentYear + '-' + currentMonth + '-' + currentDate;
+			
+			}
+		
+			class myDate extends window.Date {
+
+				constructor() {
+					super();
+				}
+
+				svDateClass() {
+					let currentYear = this.getFullYear();
+					let currentMonth = this.getMonth() + 1;
+					let currentDate = this.getDate();
+					
+					if( currentMonth < 10 ) {
+						currentMonth = '0' + currentMonth;
+					}
+					
+					if( currentDate < 10 ) {
+						currentDate = '0' + currentDate;
+					}
+					
+					return currentYear + '-' + currentMonth + '-' + currentDate;
+				}
+
+			}
+
+			//'Huvudprogrammet'
+
+		</script>
+		
+	</body>
+
+
+</html>
