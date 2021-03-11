@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <title>Kodexempel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <script type="text/javascript">
+
+      "use strict";
+      
+      var counties = [
+        'Stockholms län',
+        'Västra Götalands län',
+        'Skåne län',
+        'Östergötlands län',
+        'Uppsala län',
+        'Jönköpings län',
+        'Hallands län',
+        'Örebro län',
+        'Södermanlands län',
+        'Dalarnas län',
+        'Gävleborgs län',
+        'Värmlands län',
+        'Västmanlands län',
+        'Västerbottens län',
+        'Norrbottens län',
+        'Västernorrlands län',
+        'Kalmar län',
+        'Kronobergs län',
+        'Blekinge län',
+        'Jämtlands län',
+        'Gotlands län',
+      ];
+
+      counties.sort();
+
+      document.write('<ul>');
+      for (var i = 0; i < counties.length; i++) {
+        document.write('<li>' + counties[i] + '</li>');
+      }
+      document.write('</ul>');
+
+
+
+
+
+      var numbers = [11,2,1,10,5];
+
+      numbers.sort(function(a, b) {
+        return a - b;
+      });
+
+      document.write('<ul>');
+      for (var i = 0; i < numbers.length; i++) {
+        document.write('<li>' + numbers[i] + '</li>');
+      }
+      document.write('</ul>');
+
+    </script>
+  </body>
+</html>

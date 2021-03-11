@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kodexempel 2</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			//(int)
+			let tal1, tal2 = 32;
+
+			console.log(tal1);
+			console.log(tal2);	
+			//Vi kan använda operatorer som ni vet
+			tal1 = 10;
+			tal1++;
+			console.log(tal1);
+			tal1 += tal2;
+			tal1 + tal1 + tal2; //Dessa är samma
+
+			//Man kan använda paranteser () för att styra ordningen (precis som i matte)
+			console.log((10 + 5) * 10);
+
+			//Special värden
+			let spec = NaN;
+			let spec2 = Infinity;
+			let spec3 = -Infinity;
+
+			console.log(spec, spec2, spec3);
+
+			//strings
+			let fNamn = "Alexander";
+			let eNamn = 'Vestin';  		//Fungerar både med "" och ''
+
+			//Vi kan sätta ihop strängar med +
+
+			let namn = fNamn + " " + eNamn;
+
+			//Man kan kombinera "" och '';
+			let text = "Lorem 'Ipsum' dolor";
+			let text2 = 'Lorem "Ipsum" dolor';
+			console.log(text);
+			console.log(text2);
+
+			//Vi kan också kolla om variabler är av en typ
+			//Kan använda alla typer typeof tal1 === "number"
+			if(typeof text === "string"){
+				console.log("text är en sträng"); 
+			}else{
+				console.log("text är inte en sträng");
+			}
+
+
+
+			//Booleans
+			//Finns två värden
+
+			let isJumping = false;
+
+			if(isJumping){
+				console.log("jump");
+				isJumping = false;
+			}else{
+				console.log("grounded");
+			}
+
+			let isGrounded = true;
+
+			if(isJumping == false && isGrounded == true){
+				console.log("You can jump!!");
+			}
+
+			//Samma som C
+			//Det finns a == b, a != b, a < b, a > b 
+
+			//Strikt jämförelse
+			
+			if(57 == "57"){
+				console.log('57 är "57"');
+			}
+
+			if(57 === "57"){
+				console.log("Detta är inte sant")
+			}else{
+				console.log("57 är inte en sträng")
+			}
+
+			/*
+				57 === 57	//true
+				false == 0	//true
+				false == ""	//true
+				0 == ""		//true
+				true == 1	//true
+			*/
+		</script>
+	</body>
+</html>

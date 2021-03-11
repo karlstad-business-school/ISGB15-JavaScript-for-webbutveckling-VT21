@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Kodexempel 3</title>
+	</head>
+	<body>
+		<input type="text" value="Text här" id="input" />
+
+		<script type="text/javascript">
+			for(let i = 0; i < 10; i++){
+				//console.log(i);
+				if(i % 2 == 0){
+					console.log("i är jämnt: " + i);
+				}else{
+					console.log("i är udda: " + i)
+				}
+			}
+
+			let x = 0;
+			let sum = 0;
+			while(x < 10){
+				console.log(x);
+				sum += x;
+				x++;
+			}
+			console.log(sum);
+
+
+			//Vi kan använda loggen på många sätt
+			let input = document.getElementById("input"); //Vi går igenom detta nästa föreläsning
+			console.log(input);
+			console.log(window);
+			console.log(window.history);
+			console.log(window.history.state);
+
+			//Vi kan göra console snygg
+			//Fungerar inte i alla webbläsare. (Chrome och Firefox (+31))
+			//Fungerar som printf i C
+			//För varje %c så är det ett komma (,)
+			console.log("%c Cool färg", 'background: #42f5ce; color:#4e42f5; padding: 32px;');
+
+			//Vi kan också printa flera saker
+			console.log(x, sum, input, window);
+
+
+
+			//Dialogrutor
+
+			window.alert("Detta är en popup");
+
+		/*
+			let name = window.prompt("Vad heter du?", "Carl"); //Text, Default-värde
+			document.write(name);
+
+
+			let save = window.confirm("Vill du spara?");
+			if(save){
+				document.write("Sparat");
+			}else{
+				document.write("Inte sparat");
+			}
+
+		*/
+
+			//Math
+			//Slumpa tal mellan 1 och 10 (0-9 + 1 = 1-10)
+			console.log(Math.floor(Math.random() * 10) + 1);
+
+			//Får "alltid" det lägsta värdet
+			console.log(Math.floor(1.9999999999999));		 //Detta ger 1
+
+			//Vi kan bara ha 16 decimaler
+			console.log(Math.floor(1.99999999999999999999)); //Detta ger 2
+
+		</script>
+	</body>
+</html>
