@@ -12,7 +12,7 @@
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
     </head>
     
-    <body>
+    <body onload="setFocusOnForm();">
 
         <!--<div class="jumbotron text-center">-->
           <h1>Workshop / Räknestuga 1</h1>
@@ -22,7 +22,7 @@
     
             <div id="errorMsg"></div>
            
-            <form action="workshop.html" method="post" id="theForm">
+            <form action="workshop.html" method="post" id="theForm" onsubmit="return checkForm();" onreset="resetForm();">
                 
                 <div class="form-group">
                     <label class="control-label" for="txtNamn">Ange förnamn</label>
@@ -52,7 +52,7 @@
                 <div class="form-group">
                     <label class="control-label" for="txtFritext">Fritext</label>
                     <span>Antal tecken: </span><span id="nbrOfChars">0</span>
-                    <textarea rows="1" cols="20" title="Fritext" id="txtFritext" placeholder="Fritext" class="form-control"></textarea>
+                    <textarea oninput="countNumberOfChars(this);" rows="1" cols="20" title="Fritext" id="txtFritext" placeholder="Fritext" class="form-control"></textarea>
                 </div>
                 
 
