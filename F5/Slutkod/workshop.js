@@ -25,8 +25,28 @@ function checkForm() {
 
             }
 
+            if( currentTextRef.getAttribute('title') === 'Postnummer') {
+                //stränglängden skall 5 tecken
+                //siffror
+
+                if(currentTextRef.value.length !== 5) {
+
+                    throw { elementRef : currentTextRef };
+    
+                }
+
+                if(isNaN(currentTextRef.value)) {
+
+                    throw { elementRef : currentTextRef };
+    
+                }
+
+            }
+
+
         }
 
+        return true;
 
     } catch(oError) {
         
@@ -34,6 +54,8 @@ function checkForm() {
         document.querySelector('#errorMsg').textContent = 'Ange ' + oError.elementRef.getAttribute('title') + '!';
 
         oError.elementRef.focus();
+
+        return false;
 
     }
 }

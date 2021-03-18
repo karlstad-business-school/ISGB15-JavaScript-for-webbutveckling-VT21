@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <!--
+            Med inspiration från:
+            http://getbootstrap.com/
+            https://www.w3schools.com/bootstrap/
+        -->
+        <title>JavaScript för webbutveckling (ISGB15) 5hp</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+
+        <!--<div class="jumbotron text-center">-->
+          <h1>Workshop / Räknestuga 1 / F5</h1>
+        <!--</div>-->
+          
+        <div class="container-fluid">
+    
+            <div id="errorMsg"></div>
+           
+            <form action="ex2_20210318.html" method="post" id="theForm">
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtNamn">Ange förnamn</label>
+                    <input type="text" placeholder="Förnamn" title="Förnamn" id="txtNamn" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtEfternamn">Ange efternamn</label>
+                    <input type="text" placeholder="Efternamn" title="Efternamn" id="txtEfternamn" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtGata">Ange gata</label>
+                    <input type="text" placeholder="Gata" title="Gata" id="txtGata" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="txtOrt">Ange ort</label>
+                    <input type="text" placeholder="Ort" title="Ort" id="txtOrt" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="txtPostNummer">Ange postnummer</label>
+                    <input type="text" title="Postnummer" id="txtPostNummer" placeholder="Postnummer" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtFritext">Fritext</label>
+                    <span>Antal tecken: </span><span id="nbrOfChars">0</span>
+                    <textarea rows="1" cols="20" title="Fritext" id="txtFritext" placeholder="Fritext" class="form-control"></textarea>
+                </div>
+                
+
+                <input type="submit" value="Skicka" class="btn btn-info" />
+                <input type="reset" value="Rensa" class="btn btn-info" />
+                <a href="ex2_20210318.html" class="btn btn-info" role="button">Ladda om sidan</a>
+                
+            </form>
+            
+        </div>
+        
+		<script src="ex2_20210318.html"></script>
+       
+    </body>
+    
+</html>
