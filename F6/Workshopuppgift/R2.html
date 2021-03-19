@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <!--
+            Med inspiration från:
+            http://getbootstrap.com/
+            https://www.w3schools.com/bootstrap/
+        -->
+        <title>JavaScript för webbutveckling (ISGB15) 5hp - R2</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    
+	<!-- DELETE: onload="setFocusOnForm();" -->
+    <body>
+		
+        <div class="jumbotron text-center">
+          <h1>JavaScript för webbutveckling - R2</h1>
+        </div>
+          
+        <div class="container-fluid">
+    
+            <div id="errorMsg"></div>
+			<!-- DELETE: onsubmit="return checkForm();" -->
+            <form action="R2.html" method="post" id="theForm">
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtNamn">Ange förnamn</label>
+                    <input type="text" placeholder="Förnamn" title="Förnamn" id="txtNamn" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtEfternamn">Ange efternamn</label>
+                    <input type="text" placeholder="Efternamn" title="Efternamn" id="txtEfternamn" class="form-control" />
+                </div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtGata">Ange gata</label>
+                    <input type="text" placeholder="Gata" title="Gata" id="txtGata" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="txtOrt">Ange ort</label>
+                    <input type="text" placeholder="Ort" title="Ort" id="txtOrt" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="txtPostnummer">Ange postnummer</label>
+                    <input type="text" title="Postnummer" id="txtkommentar" placeholder="Postnummer" class="form-control" />
+                </div>
+				
+				<!-- ADD -->
+				<div class="form-group">
+					<input type="checkbox" id="chkFritext" />
+					<label class="control-label" for="chkFritext">Ange fritext</label>	
+				</div>
+                
+                <div class="form-group">
+                    <label class="control-label" for="txtFritext">Fritext</label>
+                    <span>Antal tecken: </span><span id="nbrOfChars">0</span>
+					<!-- DELETE: oninput="countNbrOfChars(this);" -->
+                    <textarea rows="5" cols="20" title="Fritext" id="txtFritext" placeholder="Fritext" class="form-control"></textarea>
+                </div>
+                
+
+                <input type="submit" value="Skicka" class="btn btn-info" />
+				<!-- DELETE: onclick="resetForm();" -->
+                <input type="reset" value="Rensa" class="btn btn-info" />
+                <a href="R2.html" class="btn btn-info" role="button">Ladda om sidan</a>
+                
+            </form>
+            
+        </div>
+        
+		<!-- ADD -->
+		<script type="text/javascript" src="R2.js"></script>
+		
+        <!--
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        -->
+    </body>
+    
+</html>
