@@ -25,6 +25,45 @@
 
 
 <script>
+	window.addEventListener('load', function() {
+		//console.log('load...');
+		let knappar = document.querySelectorAll('td>button');
+		console.log(knappar);
+		for(let i=0; i< knappar.length; i++){
+			knappar[i].classList.add('btn','btn-primary');
+		}
+
+		//Same shit...
+		knappar.forEach(knapp => {
+			knapp.addEventListener('click', changeClass);
+		});
+		
+	});
+	
+	function changeClass(oEvt) {
+		
+		//Den som har lyssnaren på sig currentTarget
+		
+		if(oEvt.currentTarget.getAttribute('id')==='btnEtt') {
+			oEvt.currentTarget.removeEventListener('click', changeClass);
+			oEvt.currentTarget.classList.remove('btn-primary');
+			oEvt.currentTarget.classList.add('btn-danger');
+			
+		}
+		else if(oEvt.currentTarget.getAttribute('id')==='btnTva') {
+			oEvt.currentTarget.removeEventListener('click', changeClass);
+			oEvt.currentTarget.setAttribute('class','btn btn-warning');				
+		}
+		else if(oEvt.currentTarget.getAttribute('id')==='btnTre') {
+			
+			oEvt.currentTarget.classList.toggle('btn-primary');
+			oEvt.currentTarget.classList.toggle('btn-info');
+		}
+		else {
+			oEvt.currentTarget.classList.add('d-none');
+		}
+		
+	}
 	
 </script>
 </body>
