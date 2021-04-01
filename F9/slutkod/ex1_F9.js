@@ -25,3 +25,79 @@ let oData = {
     timerId : null,
     h1Ref : document.querySelector("div h1")
 };
+
+window.addEventListener('load', function() {
+
+    console.log('load');
+
+    let tableRef = document.querySelector('table');
+    let tableParent = tableRef.parentElement;
+
+    console.log( tableRef, tableParent );
+
+    tableRef.remove();
+
+    console.log( tableRef, tableRef.parentElement );
+
+    createColumns(tableRef);
+
+    tableParent.appendChild(tableRef);
+
+
+});
+
+function createColumns(tableNodeRef) {
+
+    console.log('createColumns');
+
+    let sum = 0;
+    let trRef = null;
+    let tdRef = null;
+    let tdTextRef = null;
+
+    let trRefs = tableNodeRef.querySelectorAll('tr');
+
+    console.log( trRefs );
+
+    for(let i = 0; i < trRefs.length; i++) {
+        trRef = trRefs.item(i);
+
+        sum = sumOfAllColumns(trRef);
+
+        tdRef = document.createElement('td');
+        tdTextRef = document.createTextNode(sum); 
+
+        tdRef.appendChild(tdTextRef);
+        trRef.appendChild(tdRef);
+
+        tdRef.style.fontWeight = 'bold';
+        tdRef.style.backgroundColor = 'lightblue';
+
+        //Detta är inte tillåtet i strict mode och rekommenderas inte
+        //se t ex https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with
+
+        /*
+        with (tdRef.style) {
+            fontWeight = 'bold';
+            backgroundColor = 'lightblue';
+        }
+        */
+        //tdRef.setAttribute('style', 'font-weight : bold; background-color: lightblue;')
+
+    }
+}
+
+function sumOfAllColumns(trNodeRef) {
+
+    console.log('sumOfAllColumns');
+
+    let sum = 0;
+    let firstChildValue = 0;
+    let tdRef = null;
+    let tdRefs = trNodeRef.querySelectorAll('td');
+
+    
+
+    //return 0;
+
+}
