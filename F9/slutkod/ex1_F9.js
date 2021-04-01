@@ -43,6 +43,32 @@ window.addEventListener('load', function() {
 
     tableParent.appendChild(tableRef);
 
+    tableRef.addEventListener('click', function(e) {
+
+        console.log('click');
+
+        if( oData.timerId !== null) {
+            clearInterval( oData.timerId );
+            oData.counter = 0;
+        }
+
+        oData.timerId = setInterval( function() {
+
+            console.log('timer');
+            oData.counter++;
+
+            oData.h1Ref.textContent = 'Nu har det gått ' + oData.counter + ' sekunder...';
+
+            if(oData.counter === 5) {
+                clearInterval( oData.timerId );
+                oData.counter = 0;
+                oData.h1Ref.textContent = 'Nepp 5 sekunder har nu passerat...';
+            }
+
+        }, 1000);
+
+    });
+
 
 });
 
@@ -106,7 +132,7 @@ function sumOfAllColumns(trNodeRef) {
             firstChildValue = 0;
 
         } else {
-            firstChildValue = parseInt(tdRef.firstChild.nodeValue)
+            firstChildValue = parseInt(tdRef.firstChild.nodeValue);
         }
 
         sum += firstChildValue;
