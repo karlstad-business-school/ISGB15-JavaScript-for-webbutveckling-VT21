@@ -96,8 +96,22 @@ function sumOfAllColumns(trNodeRef) {
     let tdRef = null;
     let tdRefs = trNodeRef.querySelectorAll('td');
 
-    
+    for(let i = 0; i < tdRefs.length; i++) {
 
-    //return 0;
+        tdRef = tdRefs.item(i);
+
+        if( tdRef.firstChild === null || tdRef.firstChild.nodeValue.trim() === '' || isNaN(tdRef.firstChild.nodeValue)) {
+
+            tdRef.style.backgroundColor = 'red';
+            firstChildValue = 0;
+
+        } else {
+            firstChildValue = parseInt(tdRef.firstChild.nodeValue)
+        }
+
+        sum += firstChildValue;
+    }
+
+    return sum;
 
 }
